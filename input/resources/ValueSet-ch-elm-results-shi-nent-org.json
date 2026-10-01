@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "ch-elm-results-shi-nent-org",
   "url": "http://fhir.ch/ig/ch-elm/ValueSet/ch-elm-results-shi-nent-org",
-  "version": "2026-08-12",
+  "version": "2026-10-01",
   "name": "ChElmResultsShiNentOrg",
   "title": "CH ELM Results Shi Nent Org",
   "status": "active",
