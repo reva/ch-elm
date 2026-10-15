@@ -6,10 +6,11 @@
 # they contain, because the search leaves some out. Each resource is read
 # individually because the search only returns summaries. Empty ValueSets are
 # skipped and concepts referring to them are removed from the other resources.
-# Existing files are overwritten, new resources are added and local files are
-# never deleted.
+# New resources are added and local files are never deleted. Existing files are
+# only overwritten if more than the version changed, because the server sets the
+# version to the date of the download. Pass --all to overwrite them anyway.
 #
-# Usage: ELM_CERT=/path/to/client.cer ELM_KEY=/path/to/client.key tests/updateterminology.sh
+# Usage: ELM_CERT=/path/to/client.cer ELM_KEY=/path/to/client.key tests/updateterminology.sh [--all]
 # Requires curl and jq.
 #
 # To extract the certificate and key from a .p12 file (OpenSSL 3; omit -legacy
@@ -22,6 +23,13 @@ set -euo pipefail
 
 BASE_URL="https://ws.infreport-a.bag.admin.ch/ch-elm/v1/fhir"
 TYPES="ValueSet ConceptMap CodeSystem"
+
+ALL=false
+case "${1:-}" in
+  "") ;;
+  --all) ALL=true ;;
+  *) echo "usage: $0 [--all]" >&2; exit 1 ;;
+esac
 
 : "${ELM_CERT:?must point to the client certificate}"
 : "${ELM_KEY:?must point to the client key}"
@@ -150,6 +158,13 @@ done
 # Written like the server's responses: CRLF line endings, no final newline.
 for file in "$WORK"/out/*.json; do
   name="$(basename "$file")"
-  [ -e "$RESOURCES/$name" ] || echo "new: $name"
+  if [ ! -e "$RESOURCES/$name" ]; then
+    echo "new: $name"
+  elif [ "$ALL" = false ] &&
+      [ "$(jq -S 'del(.version)' "$file")" = "$(jq -S 'del(.version)' "$RESOURCES/$name")" ]; then
+    continue
+  else
+    echo "updated: $name"
+  fi
   awk 'NR > 1 { printf "\r\n" } { printf "%s", $0 }' "$file" > "$RESOURCES/$name"
 done
