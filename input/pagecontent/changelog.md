@@ -1,9 +1,10 @@
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
-### 1.15.2 2026/xx/xx
+### 1.16.0 2026/xx/xx
 
 * build fixes for SUSHI 3.20.1, the current CH IG template and IG Publisher 3.0.0: dependency on hl7.fhir.uv.xver-r5.r4 for the R5 DiagnosticReport.composition extension, unique titles in the table of contents, package download links
 * logical model: Patient.Identifier and TestResult.Specimen.Type are grouping elements of type Element
+* allow all materials for Chlamydia trachomatis starting from 01.01.2027: the leading codes map to [CH ELM Results Complete Spec](ValueSet-ch-elm-results-complete-spec.html) instead of CH ELM Results Geni Spec
 
 ### 1.15.1 2026/08/14
 
