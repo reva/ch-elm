@@ -7,7 +7,7 @@
   "title": "CH ELM Results Genotyping To Component Obersvation Profile",
   "status": "active",
   "experimental": false,
-  "description": "This CH ELM concept map specifies the ValuesSet for component.code for each leading code.",
+  "description": "This CH ELM concept map shows for each leading code defining genotyping testing results the profile the observation must conform to. The target code shows the URL of the profile.",
   "jurisdiction": [
     {
       "coding": [

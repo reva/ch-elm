@@ -7,7 +7,7 @@
   "title": "CH ELM Results Genotyping To Component Interpretation Code",
   "status": "active",
   "experimental": false,
-  "description": "This CH ELM concept map specifies the ValuesSet for component.code for each leading code.",
+  "description": "This CH ELM concept map shows for each leading code defining genotyping testing results the permitted codes for component.interpretation. The target code shows the URL of the value set containing the permitted interpretation codes.",
   "jurisdiction": [
     {
       "coding": [
