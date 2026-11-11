@@ -7,7 +7,7 @@
   "title": "CH ELM Results Genotype To Component Code",
   "status": "active",
   "experimental": false,
-  "description": "This CH ELM concept map shows for each leading code defining genotype testing results its corresponding genotyp-valueset. The target code shows the URL of the value set containing the permitted genotype codes.",
+  "description": "This CH ELM concept map shows for each leading code defining genotype testing results its corresponding genotype-valueset. The target code shows the URL of the value set containing the permitted genotype codes.",
   "jurisdiction": [
     {
       "coding": [
