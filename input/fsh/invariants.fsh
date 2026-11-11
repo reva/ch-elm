@@ -103,6 +103,11 @@ Description: "If Observation.code is mapped in http://fhir.ch/ig/ch-elm/ConceptM
 Severity: #error
 Expression: "'http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-interpretation-code'.resolve().group.where(source='http://snomed.info/sct').element.where(code=%context.code.coding.where(system='http://snomed.info/sct').first().code).exists() implies interpretation.memberOf('http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-interpretation-code'.resolve().group.where(source='http://snomed.info/sct').element.where(code=%context.code.coding.where(system='http://snomed.info/sct').first().code).target.first().code)"
 
+Invariant: ch-elm-interpretation-code-foph-code-reserve
+Description: "If Observation.code is mapped in http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-interpretation-code, then the interpretation code must be a member of the mapped ValueSet for Microbiology studies"
+Severity: #error
+Expression: "'http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-interpretation-code'.resolve().group.where(source='urn:oid:2.16.756.5.30.1.129.1.5.1').element.where(code=%context.code.coding.where(system='urn:oid:2.16.756.5.30.1.129.1.5.1').first().code).exists() implies interpretation.memberOf('http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-interpretation-code'.resolve().group.where(source='urn:oid:2.16.756.5.30.1.129.1.5.1').element.where(code=%context.code.coding.where(system='urn:oid:2.16.756.5.30.1.129.1.5.1').first().code).target.first().code)"
+
 Invariant: ch-elm-observation-profile-loinc
 Description: "If Observation.code is mapped in http://fhir.ch/ig/ch-elm/ConceptMap/ch-elm-results-to-observation-profile, then the observation must be conform to the mapped profile for Microbiology studies"
 Severity: #error

@@ -45,6 +45,7 @@ Title: "CH ELM Observation Results for Microbiology studies (set)"
 Description: "This CH ELM profile constrains the Observation resource for the purpose of laboratory test reports."
 * obeys ch-elm-interpretation-code-loinc
 * obeys ch-elm-interpretation-code-snomedct
+* obeys ch-elm-interpretation-code-foph-code-reserve
 * obeys ch-elm-observation-profile-loinc
 * obeys ch-elm-observation-profile-snomedct
 * obeys ch-elm-expecting-organism-specification
