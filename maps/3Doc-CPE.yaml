@@ -1,0 +1,40 @@
+LaboratoryReport.Header.DocumentIdentifier: 54013a2d-6012-443f-9a90-6331adb23aab
+LaboratoryReport.Header.DocumentTimestamp: "2025-01-20T12:00:00+02:00"
+LaboratoryReport.Header.DocumentLanguage: de-CH
+LaboratoryReport.Header.DocumentTitle: Laborbericht vom 20.01.2025
+LaboratoryReport.Header.DocumentSectionTitle: Analyseergebnisse der mikrobiologischen Untersuchung
+LaboratoryReport.Author.OrganizationGLN: "7601002331470"
+LaboratoryReport.Lab.OrganizationGLN: "7601002331470"
+LaboratoryReport.Lab.OrganizationName: SanLab
+LaboratoryReport.Lab.OrderIdentifier: "26500923675"
+LaboratoryReport.Orderer.OrganizationBER: A74966168
+LaboratoryReport.Orderer.OrganizationName: Praxis Dr. Hauser
+LaboratoryReport.Orderer.Physician.GLN: "7601000000514"
+LaboratoryReport.Orderer.Physician.Surname: Hauser
+LaboratoryReport.Orderer.Physician.Givenname: Peter
+LaboratoryReport.Orderer.Physician.Phone: +41 79 222 33 44
+LaboratoryReport.Orderer.Physician.Email: peter.hauser@hauserpraxis.ch
+LaboratoryReport.Orderer.OrganizationAddress.StreetLine: Hauptstrasse 10
+LaboratoryReport.Orderer.OrganizationAddress.ZipCode: "4500"
+LaboratoryReport.Orderer.OrganizationAddress.City: Solothurn
+LaboratoryReport.Patient.OASI: "7561234567897"
+LaboratoryReport.Patient.Surname: Dupont
+LaboratoryReport.Patient.Givenname: Antoine
+LaboratoryReport.Patient.Gender: female
+LaboratoryReport.Patient.DateOfBirth: "1981-02-07"
+LaboratoryReport.Patient.Address.StreetLine: rue de la république 10
+LaboratoryReport.Patient.Address.ZipCode: "1227"
+LaboratoryReport.Patient.Address.City: Carouge
+LaboratoryReport.Patient.Address.Canton: GE
+LaboratoryReport.Patient.Address.Country: CH
+LaboratoryReport.TestResult.StudyType: 18725-2
+LaboratoryReport.TestResult.ExecutionDateTime: "2025-01-19T14:20:00+02:00"
+LaboratoryReport.TestResult.Type.Code: "734351004"
+LaboratoryReport.TestResult.Type.CodeSystem: Snomed CT
+LaboratoryReport.TestResult.Specimen.CollectionDateTime: "2025-01-15T14:20:00+02:00"
+LaboratoryReport.TestResult.Value.Code: "734351004"
+LaboratoryReport.TestResult.Value.CodeSystem: Snomed CT
+LaboratoryReport.TestResult.Interpretation.Code: POS
+LaboratoryReport.TestResult.Interpretation.CodeSystem: HL7 CodeSystem ObservationInterpretation
+LaboratoryReport.TestResult.DataAbsentReason.Code: not-applicable
+LaboratoryReport.Id: 3Doc-CPE

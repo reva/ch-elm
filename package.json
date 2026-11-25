@@ -13,7 +13,9 @@
     "build:ig:continuous": "./scripts/_gencontinuous.sh",
     "update:publisher": "cd scripts && ._updatePublisher.sh",
     "serve:ig": "cd output && http-server -p 8080",
-    "open:ig": "open output/index.html"
+    "open:ig": "open output/index.html",
+    "example:new": "./maps/new-example.sh",
+    "example:to-fsh": "./maps/bundle-to-fsh.sh"
   },
   "devDependencies": {
     "http-server": "^14.1.1"
